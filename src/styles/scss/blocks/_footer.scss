@@ -1,0 +1,38 @@
+.footer {
+  background-color: $turquoise;
+}
+// .footer__container {
+// }
+.footer__body {
+  padding: calc(5px + 20 * (100vw / 1280)) 0; // fixed!!!
+  @media screen and (min-width: 576px) {
+    @include dFlexBetween;
+  }
+}
+.footer__heading {
+  @include removeMb;
+  @media screen and (max-width: 576px) {
+    text-align: center;
+  }
+}
+.footer__title {
+  margin-bottom: 10px;
+}
+// .footer__subtitle {
+// }
+.footer__list {
+  @media screen and (max-width: 576px) {
+    @include dFlexCenter;
+  }
+}
+.footer__link {
+  padding: calc(5px + 5 * (100vw / 1280));
+  font-size: calc(12px + 8 * (100vw / 1280));
+  color: $white;
+  transition: $shortDelay;
+  @media (hover: hover) {
+    &:hover {
+      color: $lightWhite05;
+    }
+  }
+}

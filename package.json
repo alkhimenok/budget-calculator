@@ -1,0 +1,21 @@
+{
+  "name": "5-counting-deductions",
+  "version": "1.0.0",
+  "description": "count-deductions in javascript applications",
+  "main": "/public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "app",
+    "course",
+    "exchange",
+    "rate",
+    "counting",
+    "deductions"
+  ],
+  "author": "Kirill Alkhimenok <kirillalhi@gmail.com>",
+  "license": "ISC"
+}

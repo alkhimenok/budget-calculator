@@ -1,0 +1,123 @@
+.current-rate {
+  flex: 0 0 300px;
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+}
+.current-rate__body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: $lightTurquoise;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.current-rate__background {
+  position: absolute;
+  z-index: -1;
+  top: calc(50% + 40px);
+  left: 50%;
+  display: inline-block;
+  font-size: calc(50px + 100 * (100vh / 840));
+  font-weight: 900;
+  color: $turquoise;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  user-select: none;
+  pointer-events: none;
+}
+.add-rate {
+  // .add-rate__body {
+  // }
+  .add-rate__list {
+    @include dFlexCenter;
+    flex-wrap: wrap;
+  }
+  // .add-rate__item {
+  // }
+  .rate {
+    @media screen and (min-width: 768px) {
+      flex: 0 1 40%;
+    }
+  }
+  .rate__label {
+    @include dFlexBetween;
+    padding: 10px 20px;
+    background-color: $lightTurquoise;
+  }
+  .rate__checkbox {
+    margin-right: 10px;
+  }
+  // .rate__currency_word {
+  // }
+  // .rate__form {
+  // }
+  .rate__input {
+    padding: 10px 0px;
+    text-align: center;
+  }
+  // .rate__img {
+  // }
+  // .icon_city {
+  // }
+}
+.current-rate__header {
+  padding: 15px 10px;
+  background-color: $darkTurquoise;
+  @include removeMb;
+}
+// .current-rate__heading {
+// }
+.current-rate__title {
+  margin-bottom: 6px;
+  font-size: 28px;
+  color: $white;
+}
+.curren-rate__date {
+  font-size: 15px;
+  color: $lightWhite05;
+}
+// .current-rate__list{
+// }
+.rate {
+  padding: 20px 10px;
+  overflow: auto;
+  @include removeMb;
+  @include castomScrol;
+}
+.rate__item {
+  @include dFlexBetween;
+  margin-bottom: 15px;
+  transform: scale(1);
+  transition: $shortDelay;
+}
+.rate__currency_word {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.rate__form {
+  position: relative;
+  flex: 0 1 600px;
+  margin: 0px 10px;
+}
+.rate__input {
+  width: 100%;
+  padding: 10px 40px 10px 20px;
+  font-size: 20px;
+  background-color: $lightWhite08;
+}
+// .rate__btn_clear {
+//   right: 10px;
+// }
+.rate__img {
+  flex: 0 0 30px;
+  height: 30px;
+  background-color: $gray;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.icon_city {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

@@ -1,0 +1,13 @@
+._relative {
+  position: relative;
+}
+._dinamick-label {
+  position: absolute;
+  left: 0;
+  top: -15px;
+  color: $red;
+  font-size: 12px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  transition: $shortDelay;
+}

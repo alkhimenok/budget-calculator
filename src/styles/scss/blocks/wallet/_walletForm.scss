@@ -1,0 +1,94 @@
+// .wallet__form {
+// }
+.form-wallet {
+  @include dFlexCenter;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 15px;
+  background-color: $lightGray;
+  border-radius: 10px;
+  @include removeMb;
+}
+// .form-wallet__operation-name {
+// }
+// .operation-name {
+// }
+// .operation-name__input {
+// }
+// .operation-name__label {
+// }
+// .form-wallet__sum {
+// }
+// .sum {
+// }
+// .sum__input {
+// }
+// .sub__label {
+// }
+// .form-wallet__operator {
+// }
+._form-block {
+  position: relative;
+  width: 90%;
+  margin-bottom: 20px;
+}
+._input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  font-size: 14px;
+  &:focus + ._label,
+  &:not(:placeholder-shown) + ._label {
+    font-size: 8px;
+    top: -20%;
+    left: 0;
+  }
+}
+._label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+  font-size: 12px;
+  text-transform: capitalize;
+  transition: $shortDelay;
+  user-select: none;
+}
+
+.operator {
+  @include dFlexCenter;
+  margin-bottom: 30px;
+}
+.operator__input {
+  display: none;
+  &:checked + .operator__label {
+    background-color: $lightTurquoise;
+  }
+}
+.operator__label {
+  @include dFlexCenter;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  font-size: 20px;
+  color: $white;
+  border-radius: 100%;
+  transition: $shortDelay;
+  cursor: pointer;
+}
+._label-plus {
+  background-color: $green;
+}
+._label-minus {
+  background-color: $red;
+}
+// .form-wallet__btn_add-operation {
+// }
+._btn-add-operation {
+  padding: 10px 45px;
+  color: $white;
+  background-color: $purple;
+  transition: $shortDelay;
+  &:hover {
+    opacity: 0.7;
+  }
+}

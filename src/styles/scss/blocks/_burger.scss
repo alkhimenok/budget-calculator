@@ -1,0 +1,57 @@
+// .header__burger {
+// }
+// .burger {
+// }
+.burger__icon {
+  position: relative;
+  z-index: 3;
+  @include dFlexCenter;
+  width: 30px;
+  height: 20px; 
+  cursor: pointer;
+  @media (hover: hover) {
+    &:hover {
+      .burger__line,
+      &::before,
+      &::after {
+        background-color: $lightWhite05;
+      }
+    }
+  }
+  .burger__line,
+  &::before,
+  &::after {
+    width: 100%;
+    height: 3px;
+    background-color: $white;
+    border-radius: 10px;
+    transition: $shortDelay;
+    pointer-events: none;
+  }
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+  &._active {
+    .burger__line {
+      transform: scale(0);
+    }
+    &::before {
+      background-color: $red;
+      transform: rotate(45deg);
+      top: 8px;
+    }
+    &::after {
+      background-color: $red;
+      transform: rotate(-45deg);
+      bottom: 8px;
+    }
+  }
+}

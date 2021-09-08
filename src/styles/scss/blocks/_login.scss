@@ -1,0 +1,199 @@
+.login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  @include dFlexCenter;
+  width: 100%;
+  height: 100%;
+  background-color: $lightBlack;
+  opacity: 0;
+  visibility: hidden;
+  transition: $shortDelay;
+
+  &._show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.login__body {
+  width: calc(200px + 200 * (100vw / 1280));
+  padding: 0 10px;
+}
+.login__select {
+  @include dFlexBottom;
+  min-height: 55px;
+  &._focus-sign-in {
+    .login__options {
+      border-radius: 0 30px 0 0;
+    }
+    ._option-sign-up {
+      z-index: 1;
+      margin-left: -10px;
+      padding: 10px 0;
+      font-size: 14px;
+      background-color: $white;
+      &:hover {
+        color: $white;
+        background-color: $lightTurquoise;
+      }
+    }
+    ._option-sign-in {
+      z-index: 2;
+      padding: 15px 0;
+      font-size: 18px;
+      color: $white;
+      background-color: $turquoise;
+    }
+  }
+  &._focus-sign-up {
+    .login__options {
+      border-radius: 30px 0 0 0;
+    }
+    ._option-sign-in {
+      z-index: 1;
+      padding: 10px 0;
+      margin-right: -10px;
+      font-size: 14px;
+      background-color: $white;
+      &:hover {
+        color: $white;
+        background-color: $lightTurquoise;
+      }
+    }
+    ._option-sign-up {
+      z-index: 2;
+      padding: 15px 0;
+      font-size: 18px;
+      color: $white;
+      background-color: $turquoise;
+    }
+  }
+  .login__options {
+    flex: 1 1 50%;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: $shortDelay;
+  }
+}
+// ._option-sign-in {
+// }
+// ._option-sign-up {
+// }
+.login__form {
+  position: relative;
+  background-color: $white;
+  padding: 30px 10px 40px 10px;
+  div {
+    margin-bottom: 30px;
+  }
+  @include removeMb;
+}
+.btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  @media (hover: hover) {
+    &:hover {
+      .btn-close__line {
+        background-color: $gray;
+      }
+    }
+  }
+  .btn-close__line {
+    position: absolute;
+    top: 8px;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: $blac;
+    transition: $shortDelay;
+    pointer-events: none;
+  }
+  ._line_one {
+    transform: rotate(45deg);
+  }
+  ._line_two {
+    transform: rotate(-45deg);
+  }
+}
+.login__item {
+  position: relative;
+}
+// ._login__email {
+// }
+.login__input {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 5px;
+  display: block;
+  background-color: $transparent;
+  border-bottom: 2px solid $gray;
+  transition: $shortDelay;
+  &:focus + .login__label,
+  &:not(:placeholder-shown) + .login__label {
+    top: -10px;
+    font-size: 12px;
+  }
+  &:focus {
+    border-bottom: 2px solid $turquoise;
+  }
+}
+// ._input-email {
+// }
+.login__label {
+  font-size: 14px;
+  position: absolute;
+  top: 10px;
+  left: 5%;
+  text-transform: capitalize;
+  transition: $shortDelay;
+}
+// ._label-email {
+// }
+// .login__icon_label {
+// }
+// ._icon-email {
+// }
+// ._login__password {
+// }
+// ._input-password {
+// }
+// ._label-password {
+// }
+// ._icon-password {
+// }
+.login__terms {
+  padding-bottom: 30px;
+  text-align: center;
+  opacity: 0;
+  transition: $shortDelay;
+  &._show {
+    opacity: 1;
+  }
+}
+// .login__checbox {
+// }
+// .login__label_castom-checkbox {
+// }
+// .login__label_text {
+// }
+.login__entry {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: $white;
+  background-color: $turquoise;
+  transition: $shortDelay;
+  &:hover {
+    background-color: $purple;
+  }
+}

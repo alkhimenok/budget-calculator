@@ -1,0 +1,135 @@
+.wallet {
+  flex: 1 1 100%;
+}
+.wallet__body {
+  @include dFlexStretch;
+  flex-direction: column;
+  padding: 20px;
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.25), 0 0 10px rgba(0, 0, 0, 0.22);
+}
+.wallet__header {
+  margin-bottom: 30px;
+  @media screen and (min-width: 576px) {
+    @include dFlexBetween;
+  }
+}
+// .wallet__heading {
+// }
+.wallet__label {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: calc(20px + 8 * (100vw / 1280));
+  text-transform: capitalize;
+}
+.wallet__balance {
+  display: inline-block;
+  font-size: calc(17px + 13 * (100vw / 1280));
+  word-break: break-all;
+  color: $darkTurquoise;
+}
+.wallet__currency_word {
+  white-space: nowrap;
+}
+// ._currency_word {
+// }
+.wallet__buttons {
+  flex: 0 0 100px;
+  text-align: end;
+  @media screen and (max-width: 576px) {
+    text-align: start;
+    margin-top: 10px;
+  }
+}
+// .wallet__select-currency {
+// }
+.select-currency {
+  position: relative;
+  display: inline;
+  margin-top: 5px;
+  &._active {
+    .select-currency__body {
+      z-index: 1;
+      transform: scale(1);
+      opacity: 1;
+      visibility: 1;
+      user-select: auto;
+    }
+  }
+}
+.select-currency__current {
+  margin-right: 10px;
+  background-color: $darkTurquoise;
+}
+._currency-value {
+  text-transform: uppercase;
+}
+.select-currency__body {
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  max-height: 200px;
+  background-color: $darkTurquoise;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: 0;
+  @include castomScrol;
+  transition: $shortDelay;
+  overflow: auto;
+  user-select: none;
+}
+.select-currency__option {
+  margin-top: 2px;
+  background-color: $turquoise;
+}
+.wallet__btn_clear {
+  background-color: $red;
+}
+// .wallet__status {
+// }
+.status {
+  margin-bottom: 50px;
+  @media screen and (min-width: 576px) {
+    @include dFlexBetween;
+  }
+}
+.status__block {
+  width: 100%;
+  height: 100%;
+  margin: 20px 0;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  @media screen and (min-width: 576px) {
+    width: 45%;
+    margin: 0;
+  }
+}
+._status-income {
+  box-shadow: 0 0 7px $green, 0 0 10px rgba(0, 0, 0, 0.22);
+  .status__title {
+    color: $green;
+  }
+}
+._status-costs {
+  box-shadow: 0 0 7px $red, 0 0 10px rgba(0, 0, 0, 0.22);
+  .status__title {
+    color: $red;
+  }
+}
+.status__title {
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.status__sum {
+  font-size: 20px;
+}
+.status__value {
+  word-break: break-all;
+}
+// .status__symbol {
+// }
+// .status__currncy_word {
+// }

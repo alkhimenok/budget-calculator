@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/styles/css/main.min.css">
+  <title>Budget calculator</title>
+</head>
+
+<body> <!-- style="color-scheme: dark;" -->
+
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container _container">
+        <div class="header__body">
+          <div class="header__burger burger">
+            <div class="burger__icon">
+              <span class="burger__line"></span>
+            </div>
+          </div>
+          <!-- /.burger -->
+          <div class="header__menu">
+            <nav class="header__nav">
+              <ul class="header__list">
+                <li>
+                  <a class="header__link" href="./public/index.html">
+                    Main
+                  </a>
+                </li>
+                <li>
+                  <a class="header__link" href="./public/currentRates.html">
+                    Rate
+                  </a>
+                </li>
+                <li>
+                  <a class="header__link" href="./public/history.html">
+                    History
+                  </a>
+                </li>
+                <li>
+                  <a class="header__link" href="./public/addCurrency.html">
+                    Add currency
+                  </a>
+                </li>
+              </ul>
+              <a class="header__link header__link_exit" href="#">
+                Go out
+              </a>
+            </nav>
+          </div>
+          <!-- /.header__menu -->
+          <div class="header__heading">
+            <h1 class="header__title _title">
+              Main
+            </h1>
+            <h3 class="header__subtitle _subtitle">
+              Сorrectly calculate<br>
+              Нour expenses in a<br>
+              Сonvenient application.<br>
+            </h3>
+          </div>
+          <!-- /.header__heading -->
+          <div class="header__user user">
+            <a class="user__icon" href="#">
+              <i class="fas fa-user"></i>
+            </a>
+          </div>
+          <!-- /.user -->
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container _container">
+        <div class="main__body">
+          <div class="current-rate _main-section">
+            <div class="current-rate__body">
+              <span class="current-rate__background _currency_word">
+                <!--  -->
+              </span>
+              <div class="current-rate__header">
+                <div class="current-rate__heading">
+                  <h2 class="current-rate__title">
+                    Current rate
+                  </h2>
+                  <p class="curren-rate__date">
+                    04.07.2021
+                  </p>
+                </div>
+              </div>
+              <ul class="current-rate__list rate">
+                <!--  -->
+              </ul>
+            </div>
+          </div>
+          <!-- /.current-rate -->
+          <div class="wallet _main-section">
+            <div class="wallet__body">
+              <div class="wallet__header">
+                <div class="wallet__heading">
+                  <p class="wallet__label">
+                    Balance:
+                  </p>
+                  <p class="wallet__balance">
+                    <span class="wallet__value _sum">
+                      0
+                    </span>
+                    <span class="wallet__currency_word _currency_word">
+                      <!-- -->
+                    </span>
+                  </p>
+                </div>
+                <div class="wallet__buttons">
+                  <button class="wallet__btn_clear _btn">
+                    clear all
+                  </button>
+                  <div class="wallet__select-currency select-currency">
+                    <button class="select-currency__current _currency-value _currency_word _btn">
+                      <!-- -->
+                    </button>
+                    <div class="select-currency__body">
+                      <!--  -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wallet__status status">
+                <div class="status__block _status-income">
+                  <h2 class="status__title">
+                    income:
+                  </h2>
+                  <p class="status__sum">
+                    <span class="status__symbol">
+                      +
+                    </span>
+                    <span class="status__value _sum">
+                      0
+                    </span>
+                    <span class="status__currncy_word _currency_word">
+                      <!-- -->
+                    </span>
+                  </p>
+                </div>
+                <div class="status__block _status-costs">
+                  <h2 class="status__title">
+                    costs:
+                  </h2>
+                  <p class="status__sum">
+                    <span class="status__symbol">
+                      -
+                    </span>
+                    <span class="status__value _sum">
+                      0
+                    </span>
+                    <span class="status__currncy_word _currency_word">
+                      <!-- -->
+                    </span>
+                  </p>
+                </div>
+              </div>
+              <form class="wallet__form form-wallet">
+                <div class="form-wallet__operation-name operation-name _form-block">
+                  <input class="operation-name__input _input" id="inputOperationName" type="text" placeholder=" ">
+                  <label class="operation-name__label _label" id="labelOperationName" for="inputOperationName">
+                    enter name operation
+                  </label>
+                  <span class="form__btn_clear btn-clear">
+                    <span class="btn-clear__line _line_one"></span>
+                    <span class="btn-clear__line _line_two"></span>
+                  </span>
+                </div>
+                <div class="form-wallet__sum sum _form-block">
+                  <input class="sum__input _input" id="inputSum" type="tel" placeholder=" ">
+                  <label class="sub__label _label" id="labelSum" for="inputSum">
+                    Enter the amount
+                  </label>
+                  <span class="form__btn_clear btn-clear">
+                    <span class="btn-clear__line _line_one"></span>
+                    <span class="btn-clear__line _line_two"></span>
+                  </span>
+                </div>
+                <div class="form-wallet__operator operator">
+                  <input class="operator__input" id="inputOperatorPlus" name="operator-symbol" type="radio">
+                  <label class="operator__label _label-plus" id="labelOperatorPlus" for="inputOperatorPlus">+</label>
+
+                  <input class="operator__input" id="inputOperatorMinus" name="operator-symbol" type="radio">
+                  <label class="operator__label _label-minus" id="labelOperatorMinus" for="inputOperatorMinus">-</label>
+                </div>
+                <button class="form-wallet__btn_add-operation _btn-add-operation" id="btnAddOperation">
+                  Add operation
+                </button>
+              </form>
+            </div>
+          </div>
+          <!-- /.wallet -->
+          <div class="history _main-section">
+            <div class="history__body">
+              <div class="history__header">
+                <h2 class="history__title">
+                  Expense history
+                </h2>
+                <div class="history__select select-history">
+                  <button class="select-history__option _current _btn" id="allOption">
+                    all budget
+                  </button>
+                  <button class="select-history__option _btn" id="spendingOption">
+                    Spending
+                  </button>
+                  <button class="select-history__option _btn" id="earningsOption">
+                    Earnings
+                  </button>
+                </div>
+              </div>
+              <ul class="history__list operation">
+                <p class="operation__empty">
+                  Empty
+                </p>
+                <!--  -->
+              </ul>
+            </div>
+          </div>
+          <!-- /.history -->
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container _container">
+        <div class="footer__body">
+          <div class="footer__heading">
+            <h1 class="footer__title _title">
+              Budget calculator
+            </h1>
+            <h3 class="footer__subtitle _subtitle">
+              Сorrectly calculate<br>
+              Нour expenses in a<br>
+              Сonvenient application.<br>
+            </h3>
+          </div>
+          <!-- /.footer__heading -->
+          <div class="footer__list">
+            <a class="footer__link" id="linkToTheAuthorInGithub" href="https://github.com/Kirill-Leonidovich">
+              github
+            </a>
+            <a class="footer__link" id="linkToTheAuthorInGmail" href="mailto:alhikirill@gmail.com">
+              g-mail
+            </a>
+          </div>
+          <!-- /.footer__list -->
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <!-- /.wrapper -->
+
+  <script src="https://kit.fontawesome.com/5c6ff8eb8e.js" crossorigin="anonymous"></script>
+  <!-- /fontawesome -->
+
+  <script src="./src/app.js" type="module"></script>
+  <!-- /scripts -->
+
+</body>
+
+</html>

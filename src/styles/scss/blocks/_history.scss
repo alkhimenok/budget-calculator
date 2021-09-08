@@ -1,0 +1,169 @@
+.history {
+  flex: 0 0 300px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+.history__body {
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.25), 0 0 5px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+}
+.history__header {
+  padding: 15px 10px;
+  background-color: $lightTurquoise;
+}
+.history__title {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: $darkTurquoise;
+}
+// .history__select {
+// }
+.select-history {
+  overflow: auto;
+  @include castomScrol;
+  @include removeMb;
+  @media screen and (min-width: 320px) {
+    @include dFlexBetween;
+  }
+}
+.select-history__option {
+  margin: 5px 2px;
+  text-transform: lowercase;
+  text-align: center;
+  background-color: $darkTurquoise;
+  opacity: 0.2;
+}
+._current {
+  opacity: 1;
+}
+.operation {
+  position: relative;
+  padding: 20px 10px;
+  overflow: auto;
+  @include removeMb;
+  font-family: "Antic", sans-serif;
+  @include castomScrol;
+  transition: $shortDelay;
+  // &.top {
+  //   padding-top: 30px;
+  // }
+}
+.operation__empty {
+  position: absolute;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: $blac;
+  transform: scale(1);
+  transition: $shortDelay;
+}
+.operation__item {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.158);
+  border-radius: 30px;
+  overflow: hidden;
+  transition: $shortDelay;
+  @media (hover: hover) {
+    &:hover {
+      .operation__body {
+        padding-bottom: 60px;
+        background-color: $lightWhite08;
+      }
+      .operation__time,
+      .operation__date,
+      .operation__btn_delete {
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  @media (hover: none) {
+    &._active {
+      .operation__body {
+        padding-bottom: 60px;
+        background-color: $lightWhite08;
+      }
+      .operation__time,
+      .operation__date,
+      .operation__btn_delete {
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+._operation-spending {
+  background-color: $red;
+}
+._operation-earnings {
+  background-color: $green;
+}
+.operation__body {
+  position: relative;
+  @include dFlexBetween;
+  padding: 10px;
+  background-color: $white;
+  overflow: auto;
+  @include castomScrol;
+  transition: $shortDelay;
+}
+.operation__name {
+  flex: 1;
+  margin-right: 20px;
+  word-break: break-word;
+}
+.operation__sum {
+  flex: 1;
+  text-align: end;
+  word-break: break-all;
+}
+// .operation__symbol {
+// }
+// .operation__value {  
+// }
+.operation__currency {
+  white-space: nowrap;
+}
+.operation__time ,
+.operation__date {
+  position: absolute;
+  left: 10px;
+  font-size: 12px;
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  transition: $shortDelay;
+  pointer-events: none;
+}
+.operation__time {
+  bottom: 10px;
+}
+.operation__date {
+  bottom: 25px;
+}
+.operation__btn_delete {
+  position: absolute;
+  right: 10px;  
+  bottom: 10px;
+  font-size: 12px;
+  font-weight: 900;
+  background-color: $transparent;
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  transition: $shortDelay;
+  cursor: pointer;
+  @media (hover: hover) {
+    &:hover {
+      color: $red;
+    }
+  }
+}
