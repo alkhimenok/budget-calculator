@@ -1,5 +1,5 @@
 {
-  "name": "5-counting-deductions",
+  "name": "budget-calculator__app",
   "version": "1.0.0",
   "description": "count-deductions in javascript applications",
   "main": "/public/index.html",
