@@ -1,3 +1,21 @@
+$transparent: rgba(255, 255, 255, 0);
+$lightTurquoise: rgba(88, 170, 195, 0.3);
+$lightWhite05: rgba(255, 255, 255, 0.5);
+$lightWhite08: rgba(255, 255, 255, 0.8);
+$lightGray: rgba(196, 196, 196, 0.2);
+$lightBlack:rgba(0, 0, 0, 0.9);
+$gray: #c4c4c4;
+$darkTurquoise: #1d697f;
+$turquoise: #58aac3;
+$white: #ffffff;
+$green: #5cc560;
+$lightGreen: rgb(11, 48, 13);
+$red: #dc2849;
+$blac: #444444;
+$purple: #704fb5;
+$shortDelay: all .2s ease-in;
+$longDelay: all .7s ease-in;
+
 @mixin dFlexBetween {
   display: flex;
   align-items: center;
@@ -56,24 +74,6 @@
     margin-right: 0;
   }
 }
-
-$transparent: rgba(255, 255, 255, 0);
-$lightTurquoise: rgba(88, 170, 195, 0.3);
-$lightWhite05: rgba(255, 255, 255, 0.5);
-$lightWhite08: rgba(255, 255, 255, 0.8);
-$lightGray: rgba(196, 196, 196, 0.2);
-$lightBlack:rgba(0, 0, 0, 0.9);
-$gray: #c4c4c4;
-$darkTurquoise: #1d697f;
-$turquoise: #58aac3;
-$white: #ffffff;
-$green: #5cc560;
-$lightGreen: rgb(11, 48, 13);
-$red: #dc2849;
-$blac: #444444;
-$purple: #704fb5;
-$shortDelay: all .2s ease-in;
-$longDelay: all .7s ease-in;
 
 /* ----- fonts */
 @import url("https://fonts.googleapis.com/css2?family=Antic&display=swap"); // font-family: 'Antic', sans-serif;
