@@ -1,16 +1,16 @@
-import { doClassList } from './scripts/utils.js'
-import { requestRates } from './scripts/rates/request.js'
-import { loader } from './scripts/UI/loader.js'
-import { setSizeForScrol, setHeight } from './scripts/general/setSize.js'
-import { setDefaultCurrency, loadOpeationFromDataBase, loadDefaultRates, addOptionDefaultRates } from './scripts/general/memory.js'
-import { loadAllRate } from './scripts/rates/addRate.js'
-import { selectOperations } from './scripts/budget/selectHistory.js'
-import { clearInput } from './scripts/general/clearInputs.js'
+import { doClassList } from './src/scripts/utils.js'
+import { requestRates } from './src/scripts/rates/request.js'
+import { loader } from './src/scripts/UI/loader.js'
+import { setSizeForScrol, setHeight } from './src/scripts/general/setSize.js'
+import { setDefaultCurrency, loadOpeationFromDataBase, loadDefaultRates, addOptionDefaultRates } from './src/scripts/general/memory.js'
+import { loadAllRate } from './src/scripts/rates/addRate.js'
+import { selectOperations } from './src/scripts/budget/selectHistory.js'
+import { clearInput } from './src/scripts/general/clearInputs.js'
 
-import { $iconBurger, showMenu } from './scripts/general/menuBurger.js'
-import { $btnClearAll, deleteAllOperation } from './scripts/budget/clearAll.js'
-import { $btnAddOperation, getDescriptionOperation } from './scripts/budget/form.js'
-import { $userIcon, showForm } from './scripts/login/render.js' ////////////////
+import { $iconBurger, showMenu } from './src/scripts/general/menuBurger.js'
+import { $btnClearAll, deleteAllOperation } from './src/scripts/budget/clearAll.js'
+import { $btnAddOperation, getDescriptionOperation } from './src/scripts/budget/form.js'
+import { $userIcon, showForm } from './src/scripts/login/render.js' ////////////////
 
 
 window.addEventListener('DOMContentLoaded', () => {
