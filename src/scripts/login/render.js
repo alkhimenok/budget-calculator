@@ -16,7 +16,6 @@ export const showForm = () => {
           <button class="login__options _option-sign-up">
             sign up
           </button>
-          <!-- add login for google -->
         </div>
         <form class="login__form" id="loginForm">
           <span class="login__btn_close btn-close">
