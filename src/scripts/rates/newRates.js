@@ -23,7 +23,7 @@ export const createRate = (description) => {
         </span>
       </div>
       <div class="rate__img">
-        <img class="icon_city" src="${location.href.endsWith('index.html' || 'counting-deductions_app/') ? '' : '../'}src/rateImgs/png/${iconName}.png" alt="city">
+        <img class="icon_city" src="${location.href.endsWith('html') ? '../' : './'}src/rateImgs/png/${iconName}.png" alt="city">
       </div>
     </li>`
 

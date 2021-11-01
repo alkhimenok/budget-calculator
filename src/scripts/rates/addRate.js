@@ -2,7 +2,7 @@ import { getDomElement, createElement, getRoundToHundredths } from '../utils.js'
 import { getDataBase, addToDataBase, deleteFromDataBase } from '../general/dataBase.js'
 
 
-export const loadAllRate = () => {  //////////////////////////////
+export const loadAllRate = () => {
   const rateItems = getDataBase('ratesList')
   const rateDescription = Object.values(rateItems)
 
@@ -30,7 +30,6 @@ const newOptionRate = (description) => {
 
   createElement('.add-rate__list', bodyRate)
   renderOtionRate()
-
 }
 
 const renderOtionRate = () => {
