@@ -80,9 +80,9 @@ $longDelay: all .7s ease-in;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;900&display=swap"); // font-family: 'Montserrat', sans-serif;
 /* fonts ----- */
 
-/* ----- zeroing */
-@import "./zeroing";
-/* zeroing ----- */
+/* ----- reset */
+@import "./reset";
+/* reset ----- */
 
 /* ----- error */ 
 @import "./UI/error";
