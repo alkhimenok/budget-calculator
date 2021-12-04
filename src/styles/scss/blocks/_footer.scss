@@ -20,19 +20,3 @@
 }
 // .footer__subtitle {
 // }
-.footer__list {
-  @media screen and (max-width: 576px) {
-    @include dFlexCenter;
-  }
-}
-.footer__link {
-  padding: calc(5px + 5 * (100vw / 1280));
-  font-size: calc(12px + 8 * (100vw / 1280));
-  color: $white;
-  transition: $shortDelay;
-  @media (hover: hover) {
-    &:hover {
-      color: $lightWhite05;
-    }
-  }
-}

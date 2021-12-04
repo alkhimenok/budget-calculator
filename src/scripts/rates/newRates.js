@@ -8,6 +8,7 @@ const rateItems = []
 
 
 export const createRate = (description) => { 
+  if (description === undefined) return
   const { currency, iconName, id, sum } = description
 
   const bodyRate = `

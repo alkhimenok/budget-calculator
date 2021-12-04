@@ -904,34 +904,6 @@ h6 {
   margin-bottom: 10px;
 }
 
-@media screen and (max-width: 576px) {
-  .footer__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-.footer__link {
-  padding: calc(5px + 5 * (100vw / 1280));
-  font-size: calc(12px + 8 * (100vw / 1280));
-  color: #ffffff;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-}
-
-@media (hover: hover) {
-  .footer__link:hover {
-    color: rgba(255, 255, 255, 0.5);
-  }
-}
-
 /* footer ----- */
 /* ----- currentRates */
 .current-rate {
