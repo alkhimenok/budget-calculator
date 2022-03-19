@@ -45,7 +45,6 @@ const start = () => {
     console.log('news')
 
   } else {
-
     setSizeForScrol('.current-rate', '.current-rate__header', '.rate')
     setSizeForScrol('.history', '.history__header', '.operation')
     setHeight('.wallet__body', 'min')
@@ -59,7 +58,6 @@ const start = () => {
 
     $btnClearAll.addEventListener('click', deleteAllOperation)
     $btnAddOperation.addEventListener('click', getDescriptionOperation)
-
   }
 
   $userIcon.addEventListener('click', showForm)
